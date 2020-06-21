@@ -3,6 +3,7 @@
  * Author  : dAwn_
  * Date    : 20.06.2020
  * Purposes: 125 是否是回文字符串
+ *           https://leetcode-cn.com/problems/valid-palindrome/
  *               1.使用双指针验证
  *               2.直接反序 看是否相同也可验证
  */
