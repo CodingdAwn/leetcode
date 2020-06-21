@@ -13,6 +13,8 @@ add_subdirectory(common_lib)
 add_subdirectory(125_验证回文字符串)
 # 2020-06-20
 add_subdirectory(10_正则表达式匹配)
+# 2020-06-21
+add_subdirectory(124_二叉树中的最大路径和)
 
 # copy compile_commands.json to source dir
 add_custom_target(copy_compile ALL
