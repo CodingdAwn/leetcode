@@ -17,6 +17,8 @@ add_subdirectory(10_正则表达式匹配)
 add_subdirectory(124_二叉树中的最大路径和)
 # 2020-06-23
 add_subdirectory(67_二进制求和)
+# 2020-06-24
+add_subdirectory(16_最接近的三数之和)
 # copy compile_commands.json to source dir
 add_custom_target(copy_compile ALL
   ${CMAKE_COMMAND} -E copy_if_different
