@@ -25,6 +25,8 @@ add_subdirectory(temp_移除重复点)
 add_subdirectory(1_两数之和)
 # 2020-06-27
 add_subdirectory(41_缺失的第一个正数)
+# 2020-06-28
+add_subdirectory(209_长度最小的子数组)
 # copy compile_commands.json to source dir
 add_custom_target(copy_compile ALL
   ${CMAKE_COMMAND} -E copy_if_different
