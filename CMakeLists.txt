@@ -29,6 +29,8 @@ add_subdirectory(41_缺失的第一个正数)
 add_subdirectory(209_长度最小的子数组)
 # 2020-06-29
 add_subdirectory(215_数组中的第K个最大元素)
+# 2020-06-30
+add_subdirectory(09_剑指offer)
 # copy compile_commands.json to source dir
 add_custom_target(copy_compile ALL
   ${CMAKE_COMMAND} -E copy_if_different
