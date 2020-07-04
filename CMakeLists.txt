@@ -35,6 +35,8 @@ add_subdirectory(09_剑指offer)
 add_subdirectory(718_最长重复子数组)
 # 2020-07-03
 add_subdirectory(378_有序矩阵中第K小的元素)
+# 2020-07-04
+add_subdirectory(32_最长有效括号)
 # copy compile_commands.json to source dir
 add_custom_target(copy_compile ALL
   ${CMAKE_COMMAND} -E copy_if_different
