@@ -39,6 +39,9 @@ add_subdirectory(378_有序矩阵中第K小的元素)
 add_subdirectory(32_最长有效括号)
 # 2020-07-04
 add_subdirectory(108_将有序数组转换为二叉搜索树)
+# 2020-07-06
+add_subdirectory(63_不同路径II)
+
 # copy compile_commands.json to source dir
 add_custom_target(copy_compile ALL
   ${CMAKE_COMMAND} -E copy_if_different
