@@ -43,6 +43,8 @@ add_subdirectory(108_将有序数组转换为二叉搜索树)
 add_subdirectory(63_不同路径II)
 # 2020-07-07
 add_subdirectory(112_路径总和)
+# 2020-07-13
+add_subdirectory(350_两个数组的交集II)
 
 # copy compile_commands.json to source dir
 add_custom_target(copy_compile ALL
