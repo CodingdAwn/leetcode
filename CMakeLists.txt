@@ -47,6 +47,8 @@ add_subdirectory(112_路径总和)
 add_subdirectory(350_两个数组的交集II)
 # 2020-07-15
 add_subdirectory(120_三角形最小路径和)
+# 2020-07-17
+add_subdirectory(35_搜索插入位置)
 
 # copy compile_commands.json to source dir
 add_custom_target(copy_compile ALL
