@@ -51,6 +51,8 @@ add_subdirectory(120_三角形最小路径和)
 add_subdirectory(35_搜索插入位置)
 # 2020-07-20
 add_subdirectory(167_两数之和II-输入有序数组)
+# 2020-07-23
+add_subdirectory(11_剑指offer)
 
 # copy compile_commands.json to source dir
 add_custom_target(copy_compile ALL
