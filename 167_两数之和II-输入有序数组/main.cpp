@@ -3,6 +3,7 @@
  * Author  : dAwn_
  * Date    : 22.07.2020
  * Purposes: 167_两数之和II
+ *           https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/
  */
 #include <iostream>
 #include <vector>
