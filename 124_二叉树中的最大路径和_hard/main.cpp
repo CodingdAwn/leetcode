@@ -6,6 +6,8 @@
  *           https://leetcode-cn.com/problems/binary-tree-maximum-path-sum/
  */
 #include <iostream>
+#include <vector>
+#include <climits>
 using namespace std;
 
 struct TreeNode {
@@ -48,5 +50,15 @@ class Solution {
 
 int main()
 {
-  return 0;
+  TreeNode* root = new TreeNode(-10);
+  root->left = new TreeNode(9);
+  root->right= new TreeNode(20);
+  root->right->left = new TreeNode(15);
+  root->right->right= new TreeNode(7);
+
+  Solution s;
+  int ret = s.maxPathSum(root);
+
+  cout << "result is " << ret << endl;
+  cout << "expect result is 42" << endl;
 }
