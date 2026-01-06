@@ -1,5 +1,7 @@
 #include "common.h"
 
+using namespace std;
+
 int GiveMeAnInteger()
 {
 	cout << "Please type a Integer!" << endl;
@@ -57,9 +59,4 @@ void LoopInputNumberToCall2(std::function<void(char* input1, char* input2)> func
 
 		func(szBuffer1, szBuffer2);
 	}
-}
-
-bool isCharOrNumber(char c)
-{
-  return isalpha(c) || isdigit(c);
 }
