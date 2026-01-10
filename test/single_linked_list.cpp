@@ -20,9 +20,10 @@ public:
   void print(string prefix) {
     cout << "[" << prefix << "] ";
     cout << "[ ";
-    while (head) {
-      cout << head->val << " ";
-      head = head->next;
+    LinkedNode* node = head;
+    while (node) {
+      cout << node->val << " ";
+      node = node->next;
     }
     cout << "]" << endl;
   }
@@ -35,14 +36,9 @@ public:
 
     print("get");
     LinkedNode *it = head;
-    while (it && index >= 0) {
-      if (index == 0) {
-        return it->val;
-      }
-      index--;
+    for (int i = 0; i < index; i++)
       it = it->next;
-    }
-    return -1;
+    return it->val;
   }
 
   void addAtHead(int val) {
@@ -74,22 +70,24 @@ public:
       addAtHead(val);
       return;
     }
+    if (index == size) {
+      addAtTail(val);
+      return;
+    }
 
     if (index < 0)
       return;
-    if (index >= size)
+    if (index > size)
       return;
 
     LinkedNode *node = new LinkedNode(val);
     LinkedNode *it = head;
-    while (it && index >= 0) {
-      if (index == 0) {
-        node->next = it->next;
-        it->next = node;
-      }
-      index--;
-      it = it->next;
+    for (int i = 0; i < index; i++) {
+      it = it->next; 
     }
+    node->next = it->next;
+    it->next = node;
+      
     size++;
     print("addAtIndex");
   }
@@ -104,13 +102,11 @@ public:
       head = head->next;
     } else {
       LinkedNode *it = head;
-      while (it->next && index >= 1) {
-        if (index == 1) {
-          it->next = it->next->next;
-        }
-        index--;
+      for (int i = 0; i < index - 1; i++) {
         it = it->next;
       }
+
+      it->next = it->next->next;
     }
     size--;
     print("deleteAtIndex");
