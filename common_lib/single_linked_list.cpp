@@ -112,17 +112,3 @@ public:
     print("deleteAtIndex");
   }
 };
-
-int main() {
-  cout << "Hello CMake!" << endl;
-  MyLinkedList *ll = new MyLinkedList();
-  ll->addAtHead(1);
-  ll->addAtTail(3);
-  ll->addAtIndex(1, 2); // linked list becomes 1->2->3
-  int ret = ll->get(1);           // return 2
-  cout << "get result : " << ret << endl;
-  ll->deleteAtIndex(1); // now the linked list is 1->3
-  ret = ll->get(1);           // return 3
-  cout << "get result : " << ret << endl;
-  return 0;
-}
