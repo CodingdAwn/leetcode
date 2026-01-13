@@ -9,10 +9,7 @@
  */
 
 #pragma once
-#include <cstddef>
 #include "common.h"
-
-using namespace std;
 
 class Solution
 {
