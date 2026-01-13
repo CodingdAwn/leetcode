@@ -1,7 +1,5 @@
 #include <gtest/gtest.h>
-#include <vector>
 #include "answer.h"
-#include "common.h"
 
 using namespace std;
 

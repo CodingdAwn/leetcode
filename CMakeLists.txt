@@ -22,6 +22,9 @@ add_subdirectory(gtest)
 # 2026-01-10
 add_subdirectory(141_linked_list_cycle)
 
+# 2026-01-13
+add_subdirectory(142_linked_list_cycle_2)
+
 # copy compile_commands.json to source dir
 add_custom_target(copy_compile ALL
   ${CMAKE_COMMAND} -E copy_if_different
