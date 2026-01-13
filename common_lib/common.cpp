@@ -72,12 +72,15 @@ ListNode* ConvertListNode(std::vector<int>& input)
   ListNode* it = nullptr;
 
   for (auto i : input) {
-    if (it == nullptr) 
+    if (head == nullptr) 
     {
       head = new ListNode(i);
       it = head;
     }
-    it = it->next;
+    else {
+      it->next = new ListNode(i);
+      it = it->next;
+    }
   }
   return head;
 }
