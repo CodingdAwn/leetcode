@@ -3,7 +3,6 @@ add_executable(141_linked_list_cycle)
 target_sources(141_linked_list_cycle
   PRIVATE
     test.cpp
-    answer.cpp
 )
 
 target_link_libraries(141_linked_list_cycle

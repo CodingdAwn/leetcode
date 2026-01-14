@@ -42,18 +42,6 @@ include(GoogleTest)
 gtest_discover_tests(${PROJECT_NAME})
 EOF
 
-echo "--------------------"
-echo "generate cpp file..."
-
-# generate answer.cpp
-CPP="${TARGET_PATH}/answer.cpp"
-cat << EOF > "${CPP}"
-#include "answer.h"
-EOF
-
-echo "--------------------"
-echo "generate header file..."
-
 # generate answer.h
 HEADER="${TARGET_PATH}/answer.h"
 cat << EOF > "${HEADER}"
