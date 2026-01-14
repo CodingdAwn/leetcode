@@ -26,12 +26,12 @@ public:
     // 因为fast更快，所以肯定是fast先到终点
     while (fast && fast->next)
     {
-      if (fast->next == slow)
+      slow = slow->next;
+      fast = fast->next->next;
+      if (fast== slow)
       {
         return true;
       }
-      slow = slow->next;
-      fast = fast->next->next;
     }
     return false;
   }

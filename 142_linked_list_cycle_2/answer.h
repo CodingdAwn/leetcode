@@ -12,7 +12,7 @@
 class Solution
 {
 public:
-  /*           x   p(交点)
+  /*           x  | p(交点)
    *    ----------------
    *               \   |
    *               z\  |y
@@ -30,19 +30,19 @@ public:
     ListNode* slow = head;
     while (fast && fast->next)
     {
-      if (fast->next == slow)
-      {
-        // 是环形链表 判断x=z
-        while (fast != x)
-        {
-          fast = fast->next;
-          x = x->next;
-        }
-        return fast;
-      }
-
       fast = fast->next->next;
       slow = slow->next;
+      if (fast == slow)
+      {
+        // 是环形链表 判断x=z
+        ListNode* z= fast;
+        while (z != x)
+        {
+          z = z->next;
+          x = x->next;
+        }
+        return z;
+      }
     }
 
     return nullptr;
