@@ -1,8 +1,8 @@
 #pragma once
 
+#include <functional>
 #include <string>
 #include <vector>
-#include <functional>
 
 // Definition for singly-linked list.
 struct ListNode
@@ -10,6 +10,7 @@ struct ListNode
   int val;
   ListNode* next;
   ListNode(int x) : val(x), next(NULL) {}
+  ListNode(int x, ListNode* next) : val(x), next(next) {}
 };
 
 // recieve a Integer number

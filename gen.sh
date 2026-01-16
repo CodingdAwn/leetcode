@@ -17,11 +17,16 @@ TARGET_PATH="${DIR}/${PROJECT_NAME}"
 echo "--------------------"
 echo "generate path: ${TARGET_PATH}" 
 
+if [[ -d ${TARGET_PATH} ]]; then
+  echo "error path is exist!"
+  exit
+fi
+
+mkdir -p "${TARGET_PATH}"
+
 CMAKE_FILE="${TARGET_PATH}/CMakeLists.txt"
 echo "--------------------"
 echo "generate file: ${CMAKE_FILE}" 
-
-mkdir -p "${DIR}/${PROJECT_NAME}"
 cat << EOF > "${CMAKE_FILE}"
 add_executable(${PROJECT_NAME})
 
