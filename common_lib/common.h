@@ -1,5 +1,6 @@
 #pragma once
 
+#include <string>
 #include <vector>
 #include <functional>
 
@@ -22,3 +23,6 @@ void LoopInputNumberToCall2(std::function<void(char* input1, char* input2)> func
 
 // maybe make template function, but now it totally work fine.
 ListNode* ConvertListNode(std::vector<int>& input);
+
+// listnode to string
+std::string to_string(ListNode* head);
