@@ -91,6 +91,9 @@ string to_string(ListNode* head)
   while (head)
   {
     res += std::to_string(head->val);
+    head = head->next;
+    if (head)
+      res += ",";
   }
 
   res += "]";
