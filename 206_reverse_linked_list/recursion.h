@@ -15,11 +15,16 @@ namespace recursion
 class Solution
 {
 public:
-  ListNode* reverseList(ListNode* head)
+  ListNode* reverse(ListNode* cur, ListNode* prev)
   {
-    //
-    return nullptr;
+    if (cur == nullptr) return prev;
+
+    ListNode* tmp = cur->next;
+    cur->next = prev;
+
+    return reverse(tmp, cur);
   }
+  ListNode* reverseList(ListNode* head) { return reverse(head, nullptr); }
 };
 
-}; // namespace iterate
+}; // namespace recursion
