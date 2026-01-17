@@ -16,9 +16,6 @@ enable_testing()
 # first import common lib
 add_subdirectory(common_lib)
 
-# 2026-01-12 gtests
-add_subdirectory(gtest)
-
 # 2026-01-10 Easy
 add_subdirectory(141_linked_list_cycle)
 
