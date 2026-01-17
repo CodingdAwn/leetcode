@@ -31,6 +31,9 @@ add_subdirectory(19_remove_nth_node_from_end_of_list)
 # 2026-01-17
 add_subdirectory(206_reverse_linked_list)
 
+# 2026-01-17
+add_subdirectory(203_remove_linked_list_elements)
+
 # copy compile_commands.json to source dir
 add_custom_target(copy_compile ALL
   ${CMAKE_COMMAND} -E copy_if_different
