@@ -27,18 +27,47 @@ while getopts ":d:c:" opt; do
   esac
 done
 
+# 输入是否为空
 if [[ -z $DIFFICULTY ]] || [[ -z $CONTENT ]]; then
+  echo "difficulty or content is null"
   echo "usage: $0 -d [easy|medium|hard] -c \"题目编号. 题目名称\" "
+  exit 1
+fi
+
+# 检测难度输入是否正确
+if [[ ${DIFFICULTY} != "easy" ]] && \
+   [[ ${DIFFICULTY} != "medium" ]] && \
+   [[ ${DIFFICULTY} != "hard" ]]; then
+  echo "difficulty is invalid"
+  echo "usage: $0 -d [easy|medium|hard] -c \"题目编号. 题目名称\" "
+  exit 1
 fi
 
 ID=$(echo ${CONTENT} | sed "s/^\([0-9]*\).*/\1/")
+TITLE=$(echo ${CONTENT} | sed "s/^[0-9. ]*//;")
 NAME=$(echo ${CONTENT} | sed "s/^[0-9.]*//; s/ //g")
 
-if [[ ${$ID} -gt 10 ]]; then
+# 再次检测一下是否是空的
+if [[ -z $ID ]] || [[ -z $NAME ]]; then
+  echo "id or name is null"
+  echo "usage: $0 -d [easy|medium|hard] -c \"题目编号. 题目名称\" "
+  exit 1
+fi
+
+if [[ -n "$(echo ${ID} | sed 's/[0-9]//g')" ]]; then
+  echo "id is not a digit"
+  echo "usage: $0 -d [easy|medium|hard] -c \"题目编号. 题目名称\" "
+  exit 1
+fi
+
+# 检测不能太长
+if [[ ${#ID} -gt 10 ]]; then
+  echo $ID
   echo "ID is too long"
   exit 1
 fi
-if [[ ${$NAME} -gt 100 ]]; then
+if [[ ${#NAME} -gt 100 ]]; then
+  echo $NAME
   echo "Name is too long"
   exit 1
 fi
@@ -84,8 +113,16 @@ EOF
 
 # generate answer.h
 HEADER="${TARGET_PATH}/answer.h"
+cur_date=$(date +"%Y-%m-%d")
 cat << EOF > "${HEADER}"
-TODO file header
+/**
+ * File    : answer.h
+ * Author  : dAwn_
+ * Date    : ${cur_date}
+ * Problem : ${ID}-${DIFFICULTY}-${TITLE}
+ * Link    : 
+*/
+
 #pragma once
 #include "common.h"
 

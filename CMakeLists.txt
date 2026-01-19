@@ -41,7 +41,7 @@ add_subdirectory(328_odd_even_linked_list)
 add_subdirectory(234_palindrome_linked_list)
 
 # 2026-01-19
-add_subdirectory(easy/21_MergeLinkedLists)
+add_subdirectory(easy/21_MergeTwoSortedLists)
 
 # copy compile_commands.json to source dir
 add_custom_target(copy_compile ALL
