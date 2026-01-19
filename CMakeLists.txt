@@ -37,6 +37,9 @@ add_subdirectory(203_remove_linked_list_elements)
 # 2026-01-17 medium
 add_subdirectory(328_odd_even_linked_list)
 
+# 2026-01-18 easy
+add_subdirectory(234_palindrome_linked_list)
+
 # copy compile_commands.json to source dir
 add_custom_target(copy_compile ALL
   ${CMAKE_COMMAND} -E copy_if_different
