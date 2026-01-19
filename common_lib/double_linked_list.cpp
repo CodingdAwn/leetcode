@@ -7,13 +7,13 @@ struct LinkedNode
   LinkedNode(int v) : val(v), next(nullptr), prev(nullptr) {}
 };
 
-class DLinkedList
+class MyLinkedList
 {
   LinkedNode* head_;
   int size_;
 
 public:
-  DLinkedList()
+  MyLinkedList()
   {
     head_ = nullptr;
     size_ = 0;
@@ -32,7 +32,7 @@ public:
     return it->val;
   }
 
-  void addAtHead(int val) 
+  void addAtHead(int val)
   {
     LinkedNode* node = new LinkedNode(val);
     if (head_ == nullptr)
@@ -41,14 +41,14 @@ public:
       size_++;
       return;
     }
-    
+
     node->next = head_;
     head_->prev = node;
     head_ = node;
     size_++;
   }
 
-  void addAtTail(int val) 
+  void addAtTail(int val)
   {
     LinkedNode* node = new LinkedNode(val);
     if (head_ == nullptr)
@@ -68,7 +68,7 @@ public:
     size_++;
   }
 
-  void addAtIndex(int index, int val) 
+  void addAtIndex(int index, int val)
   {
     if (index == 0)
     {
@@ -80,8 +80,7 @@ public:
       addAtTail(val);
       return;
     }
-    if (index > size_ || index < 0)
-      return;
+    if (index > size_ || index < 0) return;
 
     LinkedNode* node = new LinkedNode(val);
     LinkedNode* it = head_;
@@ -96,17 +95,16 @@ public:
     size_++;
   }
 
-  void deleteAtIndex(int index) 
+  void deleteAtIndex(int index)
   {
-    if (head_ == nullptr)
-      return;
-    if (index < 0 || index >= size_)
-      return;
+    if (head_ == nullptr) return;
+    if (index < 0 || index >= size_) return;
     if (index == 0)
     {
-      // TODO error
-      delete head_;
-      head_ = nullptr;
+      LinkedNode* tmp = head_;
+      head_ = tmp->next;
+      delete tmp;
+      size_--;
       return;
     }
 
@@ -116,5 +114,8 @@ public:
       it = it->next;
     }
     it->prev->next = it->next;
+    if (it->next) it->next->prev = it->prev;
+    delete it;
+    size_--;
   }
 };
