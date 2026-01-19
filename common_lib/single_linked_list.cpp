@@ -7,12 +7,12 @@ struct LinkedNode {
   LinkedNode(int v) : val(v), next(nullptr) {}
 };
 
-class MyLinkedList {
+class SLinkedList {
   LinkedNode *head;
   int size;
 
 public:
-  MyLinkedList() {
+  SLinkedList() {
     head = nullptr;
     size = 0;
   }
