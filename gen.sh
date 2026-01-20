@@ -144,6 +144,19 @@ TEST(Solution, somefunction)
 
 EOF
 
+# generated add_subdirectory code
+SUBDIRCODE="${DIR}/${DIFFICULTY}/CMakeLists.txt"
+cat << EOF >> "${SUBDIRCODE}"
+# ${cur_date}
+add_subdirectory(${PROJECT_NAME})
+
+EOF
+
+echo "add_subdirectory code tail 10: "
+tail -n 10 ${SUBDIRCODE}
+echo "------------------------------"
+echo ""
+
 echo "------------------------------"
 TEST="${TARGET_PATH}/test.cpp"
 echo "CMakeFile generated: ${CMAKE_FILE}"
