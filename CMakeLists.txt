@@ -22,6 +22,12 @@ add_subdirectory(backup)
 # easy
 add_subdirectory(easy)
 
+# medium
+add_subdirectory(medium)
+
+# hard
+add_subdirectory(hard)
+
 # copy compile_commands.json to source dir
 add_custom_target(copy_compile ALL
   ${CMAKE_COMMAND} -E copy_if_different

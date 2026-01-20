@@ -120,7 +120,7 @@ cat << EOF > "${HEADER}"
  * Author  : dAwn_
  * Date    : ${cur_date}
  * Problem : ${ID}-${DIFFICULTY}-${TITLE}
- * Link    :  
+ * Link    : 
 */
 
 #pragma once
