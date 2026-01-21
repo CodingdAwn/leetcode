@@ -22,8 +22,9 @@ public:
   Node* prev;
   Node* next;
   Node* child;
-  Node() : val(0), prev(nullptr), next(nullptr), child(nullptr) {}
-  Node(int v) : val(v), prev(nullptr), next(nullptr), child(nullptr) {}
+  Node* random;
+  Node() : val(0), prev(nullptr), next(nullptr), child(nullptr), random(nullptr) {}
+  Node(int v) : val(v), prev(nullptr), next(nullptr), child(nullptr), random(nullptr) {}
 };
 
 // recieve a Integer number
