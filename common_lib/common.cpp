@@ -99,3 +99,20 @@ string to_string(ListNode* head)
   res += "]";
   return res;
 }
+
+string to_string(Node* head)
+{
+  if (head == nullptr) return "[]";
+
+  std::string res = "[";
+  while (head)
+  {
+    res += std::to_string(head->val);
+    head = head->next;
+    if (head)
+      res += ",";
+  }
+
+  res += "]";
+  return res;
+}

@@ -13,6 +13,19 @@ struct ListNode
   ListNode(int x, ListNode* next) : val(x), next(next) {}
 };
 
+// Definition for a Node.
+// 430 used it
+class Node
+{
+public:
+  int val;
+  Node* prev;
+  Node* next;
+  Node* child;
+  Node() : val(0), prev(nullptr), next(nullptr), child(nullptr) {}
+  Node(int v) : val(v), prev(nullptr), next(nullptr), child(nullptr) {}
+};
+
 // recieve a Integer number
 int GiveMeAnInteger();
 
@@ -27,3 +40,6 @@ ListNode* ConvertListNode(std::vector<int>& input);
 
 // listnode to string
 std::string to_string(ListNode* head);
+
+// node to string
+std::string to_string(Node* head);
