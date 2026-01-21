@@ -4,7 +4,7 @@
 
 using namespace std;
 
-TEST(Solution, somefunction)
+TEST(Solution, flatten)
 {
   Solution s;
   // 创建第一层: 1-2-3-4-5-6
@@ -50,5 +50,19 @@ TEST(Solution, somefunction)
   node8->child = node11;
 
   Node* res = s.flatten(head);
-  EXPECT_EQ(to_string(res), "[1,2,3,7,8,11,12,9,10,4,5,6,]");
+  EXPECT_EQ(to_string(res), "[1,2,3,7,8,11,12,9,10,4,5,6]");
 }
+
+TEST(Solution, flatten2)
+{
+  Solution s;
+    Node* head = new Node(1);
+    Node* node2 = new Node(2);
+    Node* node3 = new Node(3);
+    
+    head->next = node2; node2->prev = head;
+    head->child = node3;
+
+  Node* res = s.flatten(head);
+  EXPECT_EQ(to_string(res), "[1,3,2]");
+}    
