@@ -7,3 +7,6 @@ add_subdirectory(430_FlattenaMultilevelDoublyLinkedList)
 # 2026-01-22
 add_subdirectory(138_CopyListwithRandomPointer)
 
+# 2026-01-23
+add_subdirectory(61_RotateList)
+
