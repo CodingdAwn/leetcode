@@ -18,3 +18,14 @@
 找到一个不错的项目**leetcode.nvim**,可以直接在nvim中查看题目，以及leetcode刷题的进度，感觉很不错
 
 但是他也有一些没有支持的功能，比如cpp的lsp,如果我是使用的而clangd,我需要cmakelsit,需要compile json,打算fork下自己修改一版。
+
+leetcode.nvim 
+pro:
+1. 省去写测试时间，直接使用web api去提交test 以及commit
+2. 有leetcode刷题进度，反馈好一些
+3. 快速刷题
+
+con:
+1. 需要时常更新cookie
+2. cpp没有调试环境，没有lsp支持
+3. 没法记录自己的一些想法
