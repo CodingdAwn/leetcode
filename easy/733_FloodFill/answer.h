@@ -33,6 +33,9 @@ public:
   vector<vector<int>> floodFill(vector<vector<int>>& image, int sr, int sc, int color)
   {
     int src_color = image[sr][sc];
+    if (src_color == color)
+      return image;
+
     int row = image.size();
     int col = image[0].size();
     dfs(image, sr, sc, row, col, src_color, color);
