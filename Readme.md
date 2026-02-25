@@ -14,6 +14,15 @@
 * gen.sh可以生成对应题目的目录，以及部分代码，cmake的代码也生成了，可以更方便的专注于题目的书写
 * common库提供了做题中需要用到的一些输入输出，转化，基础类型的定义，只要将题目中的Solution复制过来，就可以直接做题了。
 
+# usage
+```
+gen.sh -d easy -c "1. Two Sum"
+
+cmake --build build
+
+ctest --test-dir --output-on-failure ./build/easy/1_TwoSum 
+```
+
 # 准备废弃了
 找到一个不错的项目**leetcode.nvim**,可以直接在nvim中查看题目，以及leetcode刷题的进度，感觉很不错
 

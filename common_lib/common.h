@@ -44,3 +44,6 @@ std::string to_string(ListNode* head);
 
 // node to string
 std::string to_string(Node* head);
+
+// vector<vector<int<> to string
+std::string to_string(std::vector<std::vector<int>>& vecs);

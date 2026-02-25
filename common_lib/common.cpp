@@ -1,6 +1,8 @@
 #include "common.h"
 #include <algorithm>
+#include <cstddef>
 #include <iostream>
+#include <sstream>
 
 using namespace std;
 
@@ -29,7 +31,8 @@ void LoopInputNumberToCall(function<void(char* input)> func)
     // to get the \r\t
     cin.get();
     string input = szBuffer;
-    if (input.compare("exit") == 0) break;
+    if (input.compare("exit") == 0)
+      break;
     func(szBuffer);
   }
 }
@@ -45,7 +48,8 @@ void LoopInputNumberToCall2(function<void(char* input1, char* input2)> func)
     // to get the \r\t
     cin.get();
     string input1 = szBuffer1;
-    if (input1.compare("exit") == 0) break;
+    if (input1.compare("exit") == 0)
+      break;
 
     cout << "Please type Integer numbers2" << endl;
     char szBuffer2[128] = {0};
@@ -54,15 +58,17 @@ void LoopInputNumberToCall2(function<void(char* input1, char* input2)> func)
     // to get the \r\t
     cin.get();
     string input2 = szBuffer2;
-    if (input2.compare("exit") == 0) break;
+    if (input2.compare("exit") == 0)
+      break;
 
     func(szBuffer1, szBuffer2);
   }
 }
 
-ListNode* ConvertListNode(std::vector<int>& input)
+ListNode* ConvertListNode(vector<int>& input)
 {
-  if (input.empty()) return nullptr;
+  if (input.empty())
+    return nullptr;
 
   ListNode* head = nullptr;
   ListNode* it = nullptr;
@@ -85,12 +91,13 @@ ListNode* ConvertListNode(std::vector<int>& input)
 
 string to_string(ListNode* head)
 {
-  if (head == nullptr) return "[]";
+  if (head == nullptr)
+    return "[]";
 
-  std::string res = "[";
+  string res = "[";
   while (head)
   {
-    res += std::to_string(head->val);
+    res += to_string(head->val);
     head = head->next;
     if (head)
       res += ",";
@@ -102,12 +109,13 @@ string to_string(ListNode* head)
 
 string to_string(Node* head)
 {
-  if (head == nullptr) return "[]";
+  if (head == nullptr)
+    return "[]";
 
-  std::string res = "[";
+  string res = "[";
   while (head)
   {
-    res += std::to_string(head->val);
+    res += to_string(head->val);
     head = head->next;
     if (head)
       res += ",";
@@ -115,4 +123,33 @@ string to_string(Node* head)
 
   res += "]";
   return res;
+}
+
+string to_string(vector<vector<int>>& vecs)
+{
+  size_t row = vecs.size();
+  if (row == 0)
+    return "[[]]";
+
+  stringstream ss;
+  ss << "[";
+  for (int i = 0; i < row; i++)
+  {
+    ss << "[";
+    size_t col = vecs[i].size();
+    for (int j = 0; j < col; j++)
+    {
+      ss << vecs[i][j];
+      if (j != col - 1)
+        ss << ",";
+    }
+
+    if (i != row - 1)
+      ss << "],";
+    else
+      ss << "]";
+  }
+
+  ss << "]";
+  return ss.str();
 }
