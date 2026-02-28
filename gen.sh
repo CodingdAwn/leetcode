@@ -125,6 +125,7 @@ cat << EOF > "${HEADER}"
 
 #pragma once
 #include "common.h"
+using namespace std;
 
 TODO copy leetcode problem
 EOF
@@ -134,8 +135,6 @@ TEST="${TARGET_PATH}/test.cpp"
 cat << EOF > "${TEST}"
 #include <gtest/gtest.h>
 #include "answer.h"
-
-using namespace std;
 
 TEST(Solution, somefunction)
 {
