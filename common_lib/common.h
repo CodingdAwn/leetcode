@@ -9,6 +9,9 @@
 #include <map>
 #include <unordered_set>
 #include <unordered_map>
+#include <algorithm>
+#include <cstdint>
+#include <climits>
 
 // Definition for singly-linked list.
 struct ListNode
