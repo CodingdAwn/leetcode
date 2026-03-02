@@ -153,3 +153,21 @@ string to_string(vector<vector<int>>& vecs)
   ss << "]";
   return ss.str();
 }
+
+std::string to_string(std::vector<int>& vecs)
+{
+  if (vecs.empty())
+    return "[]";
+
+  stringstream ss;
+  ss << "[";
+  for (int i = 0; i < vecs.size(); i++)
+  {
+    ss << vecs[i];
+    if (i != vecs.size() - 1)
+      ss << ",";
+  }
+
+  ss << "]";
+  return ss.str();
+}
