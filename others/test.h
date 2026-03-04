@@ -10,4 +10,9 @@ public:
   {
     counting_sort(nums);
   }
+
+  void test_radix_sort(vector<int>& nums)
+  {
+    radix_sort(nums);
+  }
 };

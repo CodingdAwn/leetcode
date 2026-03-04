@@ -5,7 +5,8 @@ add_library(common)
 target_sources(common
   PRIVATE
     common.cpp
-    sort.cpp
+    sort/radix.cpp
+    sort/counting.cpp
   PUBLIC
     FILE_SET HEADERS
     FILES

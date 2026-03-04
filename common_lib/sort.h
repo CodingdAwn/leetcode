@@ -12,4 +12,6 @@
 // quick sort
 
 // counting sort
-void counting_sort(std::vector<int>& nums);
+#include "sort/counting.h"
+// radix sort
+#include "sort/radix.h"
