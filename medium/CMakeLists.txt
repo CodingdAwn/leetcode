@@ -13,3 +13,6 @@ add_subdirectory(61_RotateList)
 # 2026-02-26
 add_subdirectory(841_KeysandRooms)
 
+# 2026-03-05
+add_subdirectory(2343_QueryKthSmallestTrimmedNumber)
+
