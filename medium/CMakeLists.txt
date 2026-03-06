@@ -16,3 +16,6 @@ add_subdirectory(841_KeysandRooms)
 # 2026-03-05
 add_subdirectory(2343_QueryKthSmallestTrimmedNumber)
 
+# 2026-03-06
+add_subdirectory(164_MaximumGap)
+
