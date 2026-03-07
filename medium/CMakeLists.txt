@@ -19,3 +19,6 @@ add_subdirectory(2343_QueryKthSmallestTrimmedNumber)
 # 2026-03-06
 add_subdirectory(164_MaximumGap)
 
+# 2026-03-07
+add_subdirectory(24_SwapNodesinPairs)
+
