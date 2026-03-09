@@ -22,3 +22,6 @@ add_subdirectory(164_MaximumGap)
 # 2026-03-07
 add_subdirectory(24_SwapNodesinPairs)
 
+# 2026-03-09
+add_subdirectory(50_Pow)
+
