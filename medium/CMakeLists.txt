@@ -25,3 +25,6 @@ add_subdirectory(24_SwapNodesinPairs)
 # 2026-03-09
 add_subdirectory(50_Pow)
 
+# 2026-03-14
+add_subdirectory(77_Combinations)
+
